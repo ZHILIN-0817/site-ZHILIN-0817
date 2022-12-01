@@ -9,7 +9,9 @@
 <h2>w6 video</h2>
 <h2>cp2022 token</h2>
 <h2>cp2022 brython</h2><h1>NOTE</h1>
-<h2>Python 變數與基本語法</h2>
+<h2>python問題解答</h2>
+<p></p>
+<p>快速入門 適合初學者 https://tw.gitbook.net/python/python_quick_guide.html</p><h2>Python 變數與基本語法</h2>
 <div>
 <div>
 <p><span>Python 變數選定規則</span><span> </span></p>
@@ -31,6 +33,17 @@ print(keyword.kwlist)</pre>
 <div>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 10, 1): 
     print(i)</pre>
+<div><span>有關變數設定, <span style="color: #ff0000;">起始值使用, for 迴圈應用, 函式定義與呼叫</span></span><span> </span></div>
+<div>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(upto):
+  sum = 0
+  for i in range(1, upto+1, 1):
+    print("現在 sum 的值為: " + str(sum))
+    sum = sum + i
+    print("加上 " + str(i) + "之後, sum 的值為: " + str(sum))
+    print("="*30)
+addto(10)</pre>
+<span><span style="color: #ff0000;"><br/></span></span></div>
 <span><span style="color: #ff0000;"><br/></span></span></div>
 <div><span><span style="color: #ff0000;"></span></span></div>
 </div>
