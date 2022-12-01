@@ -146,9 +146,34 @@ img.add_border {
 <p></p>
 <p>學習 Brython 程式語言</p>
 <p>執行 Three.js 相關 Brython 程式, 需要將<span> </span><a href="https://mde.tw/demo/downloads/py/pyweb3d.py">pyweb3d.py</a><span> </span>放入 downloads/py 目錄中</p>
-<p>心得:沒修過這門課，但經過幾個禮拜的時間有在慢慢熟悉這門課，這學期感覺加入很多新課程內容，跟以往課程最不同的是加入<span class="TextRun BCX0 SCXO131925989" data-contrast="none" lang="EN" xml:lang="EN"><span class="NormalTextRun BCX0 SCXO131925989">TCExam。還有上課過程使用teams上課，有什麼不懂的地方有影片可以重複觀看。還有記事本可以讓每次上課內容更快找到重點.......</span></span></p>
-<p><span class="TextRun BCX0 SCXO131925989" data-contrast="none" lang="EN" xml:lang="EN"><span class="NormalTextRun BCX0 SCXO131925989"></span></span></p>
-<pre><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/cp2022.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/c603a3e6cc817d12691e765a3f3344a168b91af9/w6_hw.py">fetch personal page</a></pre><br />week13 << <a href='week13.html'>Previous</a> <a href='week10.html'>Next</a> >> week10</div>
+<p><span>心得:沒修過這門課，但經過幾個禮拜的時間有在慢慢熟悉這門課，這學期感覺加入很多新課程內容，跟以往課程最不同的是加入</span><span class="TextRun BCX0 SCXO131925989" data-contrast="none" lang="EN" xml:lang="EN"><span class="NormalTextRun BCX0 SCXO131925989">TCExam。還有上課過程使用teams上課，有什麼不懂的地方有影片可以重複觀看。還有記事本可以讓每次上課內容更快找到重點.......</span></span></p>
+<p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/cp2022.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/c603a3e6cc817d12691e765a3f3344a168b91af9/w6_hw.py">fetch personal page</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+
+brython_div1 = document["brython_div1"]
+"""
+brython_div1 &lt;= html.BUTTON("hello")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= html.A("google", href="https://google.com")
+"""
+
+url = "https://mde.tw/studlist/2022fall/1a.txt"
+data = open(url).read().split("\n")
+mdecp2022 = "https://mdecp2022.github.io/site-"
+data = data[1:-1]
+for i in data:
+    stud = i.split("\t")
+    stud_num = stud[0]
+    github_acc = stud[1]
+    #print(stud_num, github_acc)
+    if github_acc == "":
+        github_acc = stud_num
+    site = mdecp2022 + github_acc
+    link = html.A(stud_num, href=site)
+    brython_div1 &lt;= link
+    brython_div1 &lt;= html.BR()</pre>
+<pre><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/cp2022.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/c603a3e6cc817d12691e765a3f3344a168b91af9/w6_hw.py"> </a></pre>
+<pre></pre><br />week13 << <a href='week13.html'>Previous</a> <a href='week10.html'>Next</a> >> week10</div>
         
     <!-- footer -->
       <div class="container">
