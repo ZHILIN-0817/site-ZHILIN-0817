@@ -38,7 +38,27 @@
 <h2>建立stud.cycu.org</h2>
 <p>到gmail2000 找到自己的密碼</p>
 <p>並到teams w8~w9 recodings 照影片步驟.......</p>
-<h2>TCExam</h2><h1>cp2022</h1>
+<h2>TCExam</h2>
+<p><span style="color: #ff0000;">tcexam 考試時間只允許使用ipv6網路連線</span></p>
+<p><span style="color: #ff0000;"><span data-contrast="auto">若要從外部連到考試主機, 可以利用:</span> <span data-contrast="auto">Proxy: 140.130.17.4   port 3128 </span> </span></p>
+<p><span style="color: #ff0000;">如果還是不行，就用學校電腦考試</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">server {
+    listen       [::]:80 default ipv6only=on;
+    server_name  domain.cycu.org;
+    #return       301 https://$server_name$request_uri;
+     
+    allow 2001:288:6004:xx::0/32;
+    deny all;
+ 
+return 302 https://domain.cycu.org;
+     
+    #location /{
+        #root C:/tcexam/downloads;
+        #auth_basic "For Authorized Users Only!";
+        #auth_basic_user_file C:/tcexam/nginx-1.20.1/.htpasswd;
+    #}
+}</pre>
+<p></p><h1>cp2022</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
@@ -232,7 +252,7 @@ window.onload=function(){
 brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 }
 </script><h1>Homework</h1>
-<h2>week6</h2>
+<h2>week13</h2><h2>week6</h2>
 <p>學習 Brython 程式語言</p>
 <p>執行 Three.js 相關 Brython 程式, 需要將<span> </span><a href="https://mde.tw/demo/downloads/py/pyweb3d.py">pyweb3d.py</a><span> </span>放入 downloads/py 目錄中</p>
 <p>心得:沒修過這門課，但經過幾個禮拜的時間有在慢慢熟悉這門課，這學期感覺加入很多新課程內容，跟以往課程最不同的是加入<span class="TextRun BCX0 SCXO131925989" data-contrast="none" lang="EN" xml:lang="EN"><span class="NormalTextRun BCX0 SCXO131925989">TCExam。還有上課過程使用teams上課，有什麼不懂的地方有影片可以重複觀看。還有記事本可以讓每次上課內容更快找到重點.......</span></span></p>
@@ -363,8 +383,9 @@ def get_input(env):
 document["btn1"].bind('click', get_input)
 // ]]&gt;&lt;/script&gt;
 &lt;/p&gt;</pre>
-<p><br/><br/><br/></p>
 </div>
+<div></div>
+<p><br/><br/><br/><br/></p>
 <p>
 <script type="text/python">
 from browser import html, document
