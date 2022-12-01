@@ -163,6 +163,17 @@ print(keyword.kwlist)</pre>
 <div>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 10, 1): 
     print(i)</pre>
+<div><span>有關變數設定, <span style="color: #ff0000;">起始值使用, for 迴圈應用, 函式定義與呼叫</span></span><span> </span></div>
+<div>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(upto):
+  sum = 0
+  for i in range(1, upto+1, 1):
+    print("現在 sum 的值為: " + str(sum))
+    sum = sum + i
+    print("加上 " + str(i) + "之後, sum 的值為: " + str(sum))
+    print("="*30)
+addto(10)</pre>
+<span><span style="color: #ff0000;"><br/></span></span></div>
 <span><span style="color: #ff0000;"><br/></span></span></div>
 <div><span><span style="color: #ff0000;"></span></span></div>
 </div>
