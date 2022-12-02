@@ -2,6 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -140,11 +141,27 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Course focus.html'>Next</a> >> Course focus<br /><h1>About</h1>
-<p></p>
-<p><a href="https://github.com/ZHILIN-0817/site-ZHILIN-0817">https://github.com/ZHILIN-0817/site-ZHILIN-0817</a></p>
-<p></p>
-<br /> <a href='Course focus.html'>Next</a> >> Course focus</div>
+    <div id="tipue_search_content">建立stud.cycu.org << <a href='建立stud.cycu.org.html'>Previous</a> <a href='cp2022.html'>Next</a> >> cp2022<br /><h1>TCExam</h1>
+<p><span style="color: #ff0000;">tcexam 考試時間只允許使用ipv6網路連線</span></p>
+<p><span style="color: #ff0000;"><span data-contrast="auto">若要從外部連到考試主機, 可以利用:</span> <span data-contrast="auto">Proxy: 140.130.17.4   port 3128 </span> </span></p>
+<p><span style="color: #ff0000;">如果還是不行，就用學校電腦考試</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">server {
+    listen       [::]:80 default ipv6only=on;
+    server_name  domain.cycu.org;
+    #return       301 https://$server_name$request_uri;
+     
+    allow 2001:288:6004:xx::0/32;
+    deny all;
+ 
+return 302 https://domain.cycu.org;
+     
+    #location /{
+        #root C:/tcexam/downloads;
+        #auth_basic "For Authorized Users Only!";
+        #auth_basic_user_file C:/tcexam/nginx-1.20.1/.htpasswd;
+    #}
+}</pre>
+<p></p><br />建立stud.cycu.org << <a href='建立stud.cycu.org.html'>Previous</a> <a href='cp2022.html'>Next</a> >> cp2022</div>
         
     <!-- footer -->
       <div class="container">
