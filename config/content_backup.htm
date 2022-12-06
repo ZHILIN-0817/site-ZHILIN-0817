@@ -302,8 +302,24 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 <h1>Homework</h1>
 <h2>week5</h2>
 <p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/84d6edeec0cee8b772e1d8d076086d2d16a3237a/w5_hw.py">password generator</a></p>
-<p></p>
-<h2>week8~week9</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入亂數模組
+import random
+# 導入字串模組
+import string
+# 利用 def 關鍵字定義函式
+# 函式的輸入變數可以設定初始值
+def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
+    # 函式內以多行註解說明函式功能
+    """Generate random password
+    """
+    # 利用 return 關鍵字將所產生的亂數字串傳回
+    return ''.join(random.choice(chars) for _ in range(size))
+# 建立一個變數與隨後的字串對應
+pass_string = "abcdefghkmnpqrstuwxyz123456789"
+# 利用重複迴圈呼叫 password_generator() 函式 10 次
+for i in range(10):
+    print(password_generator(4, pass_string))</pre>
+<p></p><h2>week8~week9</h2>
 <p>考試週</p>
 <pre></pre>
 <pre></pre>
@@ -765,7 +781,7 @@ doc["aitetris"].bind("click", aitetris.do)
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
 <div style="width: 100%; height: 100%;"></div>
-<h1>W6 Fetch personal page</h1>
+<h1 style="width: 100%; height: 100%;">Translations of Python </h1><h1>W6 Fetch personal page</h1>
 <p></p>
 <p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/c603a3e6cc817d12691e765a3f3344a168b91af9/w6_hw.py">名單</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
