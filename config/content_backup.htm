@@ -302,8 +302,24 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 <h1>Homework</h1>
 <h2>week5</h2>
 <p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/84d6edeec0cee8b772e1d8d076086d2d16a3237a/w5_hw.py">password generator</a></p>
-<p></p>
-<h2>week8~week9</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入亂數模組
+import random
+# 導入字串模組
+import string
+# 利用 def 關鍵字定義函式
+# 函式的輸入變數可以設定初始值
+def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
+    # 函式內以多行註解說明函式功能
+    """Generate random password
+    """
+    # 利用 return 關鍵字將所產生的亂數字串傳回
+    return ''.join(random.choice(chars) for _ in range(size))
+# 建立一個變數與隨後的字串對應
+pass_string = "abcdefghkmnpqrstuwxyz123456789"
+# 利用重複迴圈呼叫 password_generator() 函式 10 次
+for i in range(10):
+    print(password_generator(4, pass_string))</pre>
+<p></p><h2>week8~week9</h2>
 <p>考試週</p>
 <pre></pre>
 <pre></pre>
@@ -399,7 +415,7 @@ print("攝氏 " + str(user_input_temp) + " 度, 等於華氏 " + str(Fahrenheit)
 <p></p>
 </div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"></pre>
-<h3>w12-1</h3>
+<h2>w12-1</h2>
 <p><button id="btn1">取使用者輸入</button></p>
 <div id="brython_div">
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">&lt;h3&gt;w12-1&lt;/h3&gt;
@@ -453,9 +469,8 @@ document["btn1"].bind('click', get_input)
 <p></p>
 <p></p>
 <p></p>
-<p><br/><br/><br/><br/><br/><br/></p>
-<h2>week13</h2>
-<p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/f4057483930658e79e666612d2a36a4e9f4fb1c3/w13_hw.py">w13 hw</a></p>
+<p><br/><br/><br/><br/><br/><br/></p><h2>week13</h2>
+<p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/f4057483930658e79e666612d2a36a4e9f4fb1c3/w13_hw.py">w13-1 hw</a></p>
 <p></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
 f=c*9/5+32
@@ -464,7 +479,16 @@ c=(f-32)*5/9
 c=input("請輸入攝氏溫度值")
 print(c,type(c))</pre>
 <p></p>
-<p><br/><br/></p>
+<p></p>
+<p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/bda7b8d8ede563fcc5c7106cb11e0fbf/raw/332cdcb29c214cd3525650fcf89a1224a327456a/w13_2_hw.py">w13-2</a><br/><br/></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
+f = c*9/5 + 32
+c = (f-32)*5/9
+'''
+c = input("請輸入攝氏溫度值")
+#print(type(c))
+c = float(c)
+print("請輸入攝氏溫度: " +str(c), "等於華氏溫度: " + str(c*9/5 +32))</pre>
 <p></p>
 <p>
 <script type="text/python">
@@ -766,7 +790,46 @@ doc["aitetris"].bind("click", aitetris.do)
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2"></textarea></div>
 <div style="width: 100%; height: 100%;"></div>
-<h1>W6 Fetch personal page</h1>
+<h1>Translations of Python</h1>
+<p>創建這個單元是想透過 python 入門做學習紀錄跟重點整理方便複習</p>
+<p>這個單元擷取內容來自於:<a href="https://tw.gitbook.net/python/python_quick_guide.html">https://tw.gitbook.net/python/python_quick_guide.html</a></p>
+<p></p>
+<p></p><h2>python 規則</h2>
+<p>五個標準數據類型：</p>
+<ul>
+<li>
+<p>數字</p>
+</li>
+<li>
+<p>字符串</p>
+</li>
+<li>
+<p>列表</p>
+</li>
+<li>
+<p>元組</p>
+</li>
+<li>
+<p>字典</p>
+</li>
+</ul>
+<p>四種不同的數值類型：</p>
+<ul>
+<li>
+<p>int (有符號整數)</p>
+</li>
+<li>
+<p>long (長整數[也可以以八進製和十六進製表示])</p>
+</li>
+<li>
+<p>float (浮點實數值)</p>
+</li>
+<li>
+<p>complex (複數)</p>
+</li>
+</ul>
+<p>運算符號</p>
+<p><span>假設 a = 10， b = 20 那麼</span></p><h1>W6 Fetch personal page</h1>
 <p></p>
 <p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/c603a3e6cc817d12691e765a3f3344a168b91af9/w6_hw.py">名單</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
