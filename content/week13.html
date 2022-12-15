@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='w1~w3.html'>w1~w3</a><li><a href='w4 video.html'>w4 video</a><li><a href='w5 video.html'>w5 video</a><li><a href='w6 video.html'>w6 video</a><li><a href='cp2022 token.html'>cp2022 token</a></li></ul><li class='has-children'><a href='NOTE.html'>NOTE</a><ul class='dropdown'><li><a href='python問題解答.html'>python問題解答</a><li><a href='Python 變數與基本語法.html'>Python 變數與基本語法</a><li><a href='建立cp2022.html'>建立cp2022</a><li><a href='cp指令.html'>cp指令</a><li><a href='建立stud.cycu.org.html'>建立stud.cycu.org</a><li><a href='TCExam.html'>TCExam</a></li></ul><li class='has-children'><a href='cp2022.html'>cp2022</a><ul class='dropdown'><li><a href='CP 靜態網頁連結.html'>CP 靜態網頁連結</a></li></ul><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='week5.html'>week5</a><li><a href='week8~week9.html'>week8~week9</a><li class='has-children'><a href='week10.html'>week10</a><ul class='dropdown'><li><a href='w10-1.html'>w10-1</a></li></ul><li><a href='week11.html'>week11</a><li><a href='week12.html'>week12</a><li><a href='w12-1.html'>w12-1</a><li><a href='week13.html'>week13</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Translations of Python.html'>Translations of Python</a><ul class='dropdown'><li><a href='python 規則.html'>python 規則</a></li></ul><li><a href='W6 Fetch personal page.html'>W6 Fetch personal page</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='NOTE.html'>NOTE</a><ul class='dropdown'><li><a href='python問題解答.html'>python問題解答</a><li><a href='Python 變數與基本語法.html'>Python 變數與基本語法</a><li><a href='建立cp2022.html'>建立cp2022</a><li><a href='cp指令.html'>cp指令</a><li><a href='建立stud.cycu.org.html'>建立stud.cycu.org</a><li><a href='TCExam.html'>TCExam</a></li></ul><li class='has-children'><a href='cp2022.html'>cp2022</a><ul class='dropdown'><li><a href='CP 靜態網頁連結.html'>CP 靜態網頁連結</a></li></ul><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='week5.html'>week5</a><li><a href='week10.html'>week10</a><li><a href='week11.html'>week11</a><li><a href='week12.html'>week12</a><li><a href='w12-1.html'>w12-1</a><li><a href='week13.html'>week13</a><li><a href='week14.html'>week14</a><li><a href='week15.html'>week15</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Translations of Python.html'>Translations of Python</a><ul class='dropdown'><li><a href='python 規則.html'>python 規則</a></li></ul><li><a href='W6 Fetch personal page.html'>W6 Fetch personal page</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,7 +141,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w12-1 << <a href='w12-1.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>week13</h1>
+    <div id="tipue_search_content">w12-1 << <a href='w12-1.html'>Previous</a> <a href='week14.html'>Next</a> >> week14<br /><h1>week13</h1>
 <p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/2bc180bc42af8948624111c3651bc8f4/raw/f4057483930658e79e666612d2a36a4e9f4fb1c3/w13_hw.py">w13-1 hw</a></p>
 <p></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
@@ -164,30 +164,7 @@ c = input("請輸入攝氏溫度值")
 c = float(c)
 print("請輸入攝氏溫度: " +str(c), "等於華氏溫度: " + str(c*9/5 +32))</pre>
 <p></p>
-<p>操過過程在補上</p>
-<p>
-<script type="text/python">
-from browser import html, document
-# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
-#user_input_temp = input("請輸入攝氏溫度值:")
-# 接著列出 user_input_temp 變數的資料型別
-# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
-#print(type(user_input_temp))
-# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
-brython_div = document["brython_div"]
-# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
-#brython_div <= user_input_temp
-# 之後若要列出 html, 則需要透過 Brython 的 html 模組
-# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
-# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
-def get_input(env):
-    user_input_temp = input("請輸入攝氏溫度值:")
-    brython_div <= user_input_temp
-# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
-# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
-document["btn1"].bind('click', get_input)
-</script>
-</p><br />w12-1 << <a href='w12-1.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
+<br />w12-1 << <a href='w12-1.html'>Previous</a> <a href='week14.html'>Next</a> >> week14</div>
         
     <!-- footer -->
       <div class="container">

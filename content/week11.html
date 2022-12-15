@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='w1~w3.html'>w1~w3</a><li><a href='w4 video.html'>w4 video</a><li><a href='w5 video.html'>w5 video</a><li><a href='w6 video.html'>w6 video</a><li><a href='cp2022 token.html'>cp2022 token</a></li></ul><li class='has-children'><a href='NOTE.html'>NOTE</a><ul class='dropdown'><li><a href='python問題解答.html'>python問題解答</a><li><a href='Python 變數與基本語法.html'>Python 變數與基本語法</a><li><a href='建立cp2022.html'>建立cp2022</a><li><a href='cp指令.html'>cp指令</a><li><a href='建立stud.cycu.org.html'>建立stud.cycu.org</a><li><a href='TCExam.html'>TCExam</a></li></ul><li class='has-children'><a href='cp2022.html'>cp2022</a><ul class='dropdown'><li><a href='CP 靜態網頁連結.html'>CP 靜態網頁連結</a></li></ul><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='week5.html'>week5</a><li><a href='week8~week9.html'>week8~week9</a><li class='has-children'><a href='week10.html'>week10</a><ul class='dropdown'><li><a href='w10-1.html'>w10-1</a></li></ul><li><a href='week11.html'>week11</a><li><a href='week12.html'>week12</a><li><a href='w12-1.html'>w12-1</a><li><a href='week13.html'>week13</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Translations of Python.html'>Translations of Python</a><ul class='dropdown'><li><a href='python 規則.html'>python 規則</a></li></ul><li><a href='W6 Fetch personal page.html'>W6 Fetch personal page</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='NOTE.html'>NOTE</a><ul class='dropdown'><li><a href='python問題解答.html'>python問題解答</a><li><a href='Python 變數與基本語法.html'>Python 變數與基本語法</a><li><a href='建立cp2022.html'>建立cp2022</a><li><a href='cp指令.html'>cp指令</a><li><a href='建立stud.cycu.org.html'>建立stud.cycu.org</a><li><a href='TCExam.html'>TCExam</a></li></ul><li class='has-children'><a href='cp2022.html'>cp2022</a><ul class='dropdown'><li><a href='CP 靜態網頁連結.html'>CP 靜態網頁連結</a></li></ul><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='week5.html'>week5</a><li><a href='week10.html'>week10</a><li><a href='week11.html'>week11</a><li><a href='week12.html'>week12</a><li><a href='w12-1.html'>w12-1</a><li><a href='week13.html'>week13</a><li><a href='week14.html'>week14</a><li><a href='week15.html'>week15</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Translations of Python.html'>Translations of Python</a><ul class='dropdown'><li><a href='python 規則.html'>python 規則</a></li></ul><li><a href='W6 Fetch personal page.html'>W6 Fetch personal page</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,60 +141,14 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w10-1 << <a href='w10-1.html'>Previous</a> <a href='week12.html'>Next</a> >> week12<br /><h1>week11</h1>
-<div>
-<div>請在個人網站中新增一個 H1 格式, 標題為 HW 的網站, 將各週作業內容、心得與討論, 以小寫的 w10, w11 </div>
-<div>w11 作業:</div>
-<div>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import ast
-# get stud_list first
-def get_stud(c_name):
-    courses = {"1a": "0747", "1b": "0761", "2a": "0773", "2b": "0786"}
-    #c_name = "1b"
-    c = courses[c_name]
-    url = "https://nfu.cycu.org/?semester=1111&amp;courseno=" + c + "&amp;column=True"
-    data = open(url).read().split("\n")
-    stud = data[:-1]
-    return stud
-    
-cp_stud = get_stud("1b")
-# get w10 quiz result
-cp_w11_quiz_url = "https://gist.githubusercontent.com/mdecycu/9df4b372ac1b7386cf259ced15f1a2b2/raw/8e59f90d8ff4f1ad4fecd4f7ee159f91eb6addf9/cp1b_w11_quiz_result.json"
-cp_w10_quiz_url = "https://gist.githubusercontent.com/mdecycu/9df4b372ac1b7386cf259ced15f1a2b2/raw/a6825f13b1bb0b61e09e74dd117729eefe1d947f/20221110_cp1b_w10_quiz.json"
-def get_score(url):
-    num_stud = 0
-    total_score = 0
-    json_data = open(url).read()
-    big_dict = ast.literal_eval(json_data)
-    data = big_dict["body"]["testuser"]
-    quiz_dict = {}
-    for i in data:
-        stud_id = data[i]["user_name"]
-        stud_score = int(float(data[i]["total_score"]))
-        quiz_dict[stud_id] = stud_score
-        num_stud = num_stud + 1
-        total_score = total_score + stud_score
-    return quiz_dict, num_stud, total_score
-    
-#cp_quiz, num_stud, total_score = get_score(cp_w10_quiz_url)
-cp_quiz, num_stud, total_score = get_score(cp_w11_quiz_url)
-cp_abs = []
-for stud in cp_stud:
-    try:
-        print(stud, cp_quiz[stud])
-    except:
-        # 缺考者沒有 quiz 成績
-        print(stud, "缺")
-        cp_abs.append(stud)
-print("\n考試平均分數為:", int(total_score/num_stud))
-# 列出缺考名單
-print("="*20)
-print("以下為 w10 缺考名單:")
-for stud in cp_abs:
-    print(stud)</pre>
-</div>
-</div>
-<br />w10-1 << <a href='w10-1.html'>Previous</a> <a href='week12.html'>Next</a> >> week12</div>
+    <div id="tipue_search_content">week10 << <a href='week10.html'>Previous</a> <a href='week12.html'>Next</a> >> week12<br /><h1>week11</h1>
+<p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/13a241345fbf42dbd1e4a956b6feb0a1/raw/9fa7de3111a7ac5d67184eaed2149c34670c2d15/w11_hw.py">缺考名單</a></p>
+<p>以下為 w10 缺考名單:<br/>40823116<br/>40823139<br/>40823241<br/>40923102<br/>40923104<br/>40923140<br/>40923144<br/>40923150<br/>40923152<br/>40923156<br/>41123119<br/>41123121<br/>41123122<br/>41123127<br/>41123133<br/>41123143<br/>41123146<br/>41123149<br/>41123150<br/>41123152</p>
+<p><span style="color: #ff99cc; background-color: #ffff99;">心得總結:</span></p>
+<p><span style="color: #ff99cc; background-color: #ffff99;">我有來學校上課跟考試，我是帶自己的筆電來考試，</span></p>
+<p><span style="color: #ff99cc; background-color: #ffff99;">在考試時段前是可以連上tcexam的，後來發現網路設定有問題 沒有在ipv6上就造成缺考的問題。</span></p>
+<p><span style="color: #ff99cc; background-color: #ffff99;">所以以後考試會選用學校電腦來做線上考試。</span></p>
+<p><span style="color: #ff99cc; background-color: #ffff99;">再來是考試內容還須要在透過影片回顧的方式做複習</span></p><br />week10 << <a href='week10.html'>Previous</a> <a href='week12.html'>Next</a> >> week12</div>
         
     <!-- footer -->
       <div class="container">
