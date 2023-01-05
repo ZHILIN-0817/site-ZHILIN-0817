@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -141,33 +141,82 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">week14 << <a href='week14.html'>Previous</a> <a href='w16.html'>Next</a> >> w16<br /><h1>w15</h1>
-<p>1.為何學習計算機程式需要建立個人倉儲?</p>
-<p><span style="color: #999999;">可以存取個人的檔案資料，每次更新內容都會有紀錄修改或是新增的內容，並且維護個人倉儲</span></p>
-<p>2.全球資訊網能夠提供甚麼功能或有什麼優點?</p>
-<p><span style="color: #999999;">網路上進行互動 和 瀏覽器的主要工具，能夠搜尋你想知道的所有事情</span></p>
+    <div id="tipue_search_content">W6 Fetch personal page << <a href='W6 Fetch personal page.html'>Previous</a> <br /><h1>題目練習</h1>
 <p></p>
-<p>3.Replit, stud.cycu.org 與 localhost 分別代表甚麼?</p>
-<p><span>Repli:<span style="color: #999999;">線上程式開發服務</span></span></p>
-<p><span>stud.cycu.org:<span style="color: #999999;">是主機的名稱</span></span></p>
-<p><span>localhost:<span style="color: #999999;">電腦網路中用於表示「此電腦」的主機名</span></span></p>
+<p>1.<a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/cc9c0c008dfdb9dc645d1a88cf309a12/raw/f8f1085bcd55dd4bd31f013f6de0a6bebb43f044/w17_ex1.py">變數宣告</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">temp=30
+print(temp)
+for i in range(10):
+    print(i)</pre>
+<p>temp做變數的名稱 然後數字是30</p>
+<p><span>for 迴圈使用的 index 變數 i ，然後範圍是10</span></p>
+<p><span>所以就會跳出0~9。</span></p>
+<p><span>2.    1~10</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sum=0
+for i in range(10):
+    print(i)
+</pre>
+<p>range(10)後面要加:</p>
+<p>跳到下一行才會是for迴圈下的。</p>
 <p></p>
-<p>4.https, ssh 到底提供使用者那些功能或優點?</p>
-<p><span>https:<span style="color: #999999;">一種讓訪客在網站輸入任何私人資訊可以獲得保護的安全加密措施....</span></span></p>
-<p><span>ssh: <span style="color: #999999;">遠端登入會話和其他網路服務提供安全性的協定</span></span></p>
+<p>3. 1~50的題目變化</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sum=0
+for i in range(1,50,5):
+    print(i)</pre>
+<p>range(1, 這代表設定的第一個變數</p>
+<p>,50,代表變數會算到50</p>
+<p>,5)代表增量</p>
 <p></p>
-<p>5.Brython 與 Python 有甚麼差別?</p>
-<p><span style="color: #999999;">Brython:可以在瀏覽器上使用python取代avaScript。</span></p>
-<p><span style="color: #999999;">Python:是一種程式語言。</span></p>
+<p>4. end 用法</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sum=0
+end=10
+for i in range(1,end+1,1):
+    print(i)</pre>
+<p><span></span>加上end=10 就是如果要改變數 直接在第二行直接修改</p>
+<p>for迴圈中的end+1代表最後數字會到10</p>
+<p><span></span></p>
+<p><span>5.</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sum=0
+start=1
+end=100
+for i in range(1,end+1,1):
+    sum = sum + i
+    #print(i)
+print("由"+str(start)+"加到"+str(end)+"等於"+str(sum)) </pre>
+<p>先加上start=1</p>
+<p>再到第5 行加上sum=sum+1</p>
+<p>接著最後一行寫上 print("由"+str(start)+"加到"+str(end)+"等於+str(sum))</p>
 <p></p>
-<p>6.能夠直接在瀏覽器中以 Brython 繪製中華民國國旗, 或模擬綠色方塊在方塊格點中任意移動, 代表甚麼?</p>
-<p><span style="color: #999999;">我能透過寫程式的內容讓想要的位置出現圖形。</span></p>
-<p><br/>7.變數, 字串, 整數, 浮點數, 數列, Tuple, Dictionary, 函式, 重複迴圈, class, 物件導向, 資料庫, 這些名詞對您而言代表甚麼?</p>
-<p><span style="color: #808080;">這是程式語言的拼圖。</span></p>
-<p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/7137b2b3767ff7a6735a96b20e5c75ee/raw/7274a352ca040853448561ffef6dab03980ae139/w15_hw_ex1.py">綠色方塊原程式碼</a></p>
-<p><a href="https://zhilin-0817.github.io/site-ZHILIN-0817/content/Brython.html?src=https://gist.githubusercontent.com/ZHILIN-0817/e360c50a698b6d1402e336cb4074f5e9/raw/8e488463e66a263949bd874620c2081cf0d03c0a/w15_2_hw.py">修改後綠色方塊</a></p>
+<p>6.定義涵式</p>
+<p>涵式的定義為 def</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def sumto(start,end):
+    sum=0
+    start=1
+    end=100
+    for i in range(1,end+1,1):
+        sum = sum + i
+        #print(i)
+    print("由"+str(start)+"加到"+str(end)+"等於"+str(sum))    
+        </pre>
 <p></p>
-<br />week14 << <a href='week14.html'>Previous</a> <a href='w16.html'>Next</a> >> w16</div>
+<p></p>
+<p>7. </p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def sumto(start=2,end=10000):
+    sum=0
+    #start=1
+    #end=100
+    for i in range(1,end+1,1):
+        sum = sum + i
+        #print(i)
+    print("由"+str(start)+"加到"+str(end)+"等於"+str(sum))    
+      
+      
+      
+      
+      
+sumto(2,800)
+sumto(5,7000)</pre>
+<p></p><br />W6 Fetch personal page << <a href='W6 Fetch personal page.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
